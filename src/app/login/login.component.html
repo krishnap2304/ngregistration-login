@@ -1,0 +1,32 @@
+<h3> Login Screen</h3>
+<div class="container">
+<form class="form" [formGroup]="loginForm" (ngSubmit)="loginUser()" id="loginForm">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="name">Username:</label>
+      <div class="col-sm-10">
+        <input type="input" class="form-control" formControlName="username" >
+        <span class="text-danger" *ngIf="l.username.touched && l.username.invalid && l.username.errors?.required">
+          Username is required
+       </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Password:</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" formControlName="password" >
+        <span class="text-danger" *ngIf="l.password.touched && l.password.invalid && l.password.errors?.required">
+          Password is required
+       </span>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="form-group">
+        <button  [disabled]="!loginForm.valid" (click)="loginUser()" type="submit" class="btn btn-primary">Login</button> &nbsp; &nbsp;
+        <button type="button" (click)="btnClickRegister()" class="btn btn-link">Register</button>&nbsp; &nbsp;
+        <button type="button" (click)="btnClickResetPwd()" class="btn btn-link">ResetPassword</button>&nbsp; &nbsp;
+        <button type="button" (click)="btnClickChangePwd()" class="btn btn-link">ChangePassword</button>
+
+      </div>
+    </div>
+  </form>
+</div>
