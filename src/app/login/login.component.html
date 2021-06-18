@@ -20,11 +20,12 @@
       </div>
     </div>
     <div class="form-group">
-      <div class="form-group">
-        <button  [disabled]="!loginForm.valid" (click)="loginUser()" type="submit" class="btn btn-primary">Login</button> &nbsp; &nbsp;
-        <button type="button" (click)="btnClickRegister()" class="btn btn-link">Register</button>&nbsp; &nbsp;
-        <button type="button" (click)="btnClickResetPwd()" class="btn btn-link">ResetPassword</button>&nbsp; &nbsp;
-        <button type="button" (click)="btnClickChangePwd()" class="btn btn-link">ChangePassword</button>
+      <div class="col-sm-offset-2 col-sm-10">
+        <br>
+        <button  [disabled]="!loginForm.valid" (click)="loginUser()" type="submit" [ngStyle]="{background: 'green'}">Login</button> &nbsp; &nbsp;
+        <button type="button" (click)="btnClickRegister()" [ngStyle]="{background: 'green'}">Register</button>&nbsp; &nbsp;
+        <button type="button" (click)="btnClickResetPwd()" [ngStyle]="{background: 'green'}">ResetPassword</button>&nbsp; &nbsp;
+        <button type="button" (click)="btnClickChangePwd()" [ngStyle]="{background: 'green'}">ChangePassword</button>
 
       </div>
     </div>

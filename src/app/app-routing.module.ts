@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
+import { SigninsuccessComponent } from './signinsuccess/signinsuccess.component';
 
 const routes: Routes = [
   {path:'',component:RegistrationComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'loginsuccess',component:LoginsuccessComponent},
   {path:'resetpassword',component:ResetpwdComponent},
   {path:'changepassword',component:ChangepwdComponent},
+  {path:'signinsuccess',component:SigninsuccessComponent}
 ];
 
 @NgModule({

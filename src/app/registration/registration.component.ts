@@ -39,10 +39,10 @@ export class RegistrationComponent implements OnInit {
     console.log("is signform valid"+this.signupForm.valid);
     this.recaptcha3.getToken().then((token: string) => {
       this.formData = this.signupForm.value;
-      console.log('Captcha Generated Successfully');
-      console.log(token);
+      //console.log('Captcha Generated Successfully');
+      //console.log(token);
       this.user.captchaResp = token;
-      console.log(this.user.captchaResp);
+      //console.log(this.user.captchaResp);
       this.user.roles = ['ROLE_USER'];
       this.user.username = this.signupForm.controls['username'].value;
       this.user.password = this.signupForm.controls['password'].value;
@@ -50,9 +50,9 @@ export class RegistrationComponent implements OnInit {
     this._service.registerUser(this.user).subscribe(
       data=>{
         console.log("Response Received")
-        this._router.navigate(['/loginsuccess']);
+        this._router.navigate(['/signinsuccess']);
       },
-      error => console.log("There was an error in the registraion process...")
+      error => console.log("An error occurred in the registraion process...")
     );
     }, (error: any) => {
 		  console.log('err ',error)

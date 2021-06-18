@@ -10,6 +10,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 import { ChangepwdComponent } from './changepwd/changepwd.component';
 import { ResetpwdComponent } from './resetpwd/resetpwd.component';
+import { SigninsuccessComponent } from './signinsuccess/signinsuccess.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ResetpwdComponent } from './resetpwd/resetpwd.component';
     RegistrationComponent,
     LoginsuccessComponent,
     ChangepwdComponent,
-    ResetpwdComponent
+    ResetpwdComponent,
+    SigninsuccessComponent
   ],
   imports: [
     AppRoutingModule,

@@ -44,7 +44,7 @@ formData:any;
         console.log("Response Received")
         this._router.navigate(['/loginsuccess']);
       },
-      (      error: any) => console.log("There was an error in the registraion process...")
+      (      error: any) => console.log("There was an error in the reset password process...")
     );
    
   }

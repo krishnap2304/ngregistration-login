@@ -32,8 +32,8 @@ export class ChangepwdComponent implements OnInit {
         this.user.roles = ["ROLE_USER"];
         this.service.changePassword(this.user).subscribe(
           (          data: any)=>{
-            console.log("Response Received")
-            console.log(this.changepwdForm.controls['username'].value)
+            //console.log("Response Received")
+            //console.log(this.changepwdForm.controls['username'].value)
             this.router.navigate(['/login']);
           },
           (          error: any) => console.log("Bad Credentials...")

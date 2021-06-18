@@ -33,18 +33,19 @@ export class LoginComponent implements OnInit {
         this.formData = this.loginForm.value;
         this.formData.recaptchaToken = token;
         this.user.captchaResp = token;
+        this.user.roles = ['ROLE_USER'];
         this.user.username = this.loginForm.controls['username'].value;
         this.user.password = this.loginForm.controls['password'].value;
         this._service.loginUser(this.user, this.user.captchaResp).subscribe(
           (          data: any)=>{
             console.log("Response Received")
-            console.log(this.loginForm.controls['username'].value)
+            //console.log(this.loginForm.controls['username'].value)
             this._router.navigate(['/loginsuccess']);
           },
           (          error: any) => console.log("Bad Credentials...")
         );
       }, error => {
-		  console.log('error while generating the recaptcha token',error)
+		  console.log('Error while generating the recaptcha token',error)
 	      });
      
     }
